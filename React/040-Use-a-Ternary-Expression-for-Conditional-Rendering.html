@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC - Front End Development Libraries - React</title>
+    <!--<link rel="stylesheet" type="text/css" href="stylesheet.css">-->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load React API -->
+    <!--<script src="../assets/react/react.production.min.js"></script>-->
+    <!-- Load React DOM-->
+    <!--<script src="../assets/react/react-dom.production.min.js"></script>-->
+    <!-- Load Babel Compiler -->
+    <!--<script src="../assets/babel/babel.min.js"></script>-->
+
+
+    <!-- Load React API -->
+    <script src="../assets/react/react.production.min.js"></script>
+    <!-- Load React DOM-->
+    <script src="../assets/react/react-dom.production.min.js"></script>
+    <!-- Load Babel Compiler -->
+    <script src="../assets/babel/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const inputStyle = {
+            width: 235,
+            margin: 5
+        };
+
+
+        class CheckUserAge extends React.Component {
+            constructor(props) {
+                super(props);
+                    this.state = {
+                        input: '',
+                        userAge: ''
+                    }
+                
+                    this.submit = this.submit.bind(this);
+                    this.handleChange = this.handleChange.bind(this);
+            };
+            
+            handleChange(event) {
+                this.setState({
+                    inputValue: event.target.value
+                });
+            }
+
+            submit() {
+                this.setState(state => ({
+                    userAge: state.input
+                }));
+            }
+                    
+            render() {
+
+                const buttonOne = <button onClick={this.submit}>Submit</button>;
+                const buttonTwo = <button>You May Enter</button>;
+                const buttonThree = <button>You Shall Not Pass</button>;
+
+                return (
+                    <div>
+                        <h3>Enter Your Age to Continue</h3>
+                        <input
+                        style={inputStyle}
+                        type='number'
+                        value={this.state.input}
+                        onChange={this.handleChange}
+                        />
+                        <br />
+                        {/* Change code below this line */}
+                        {
+                        this.state.userAge === ''
+                            ? buttonOne
+                            : this.state.userAge >= 18
+                            ? buttonTwo
+                            : buttonThree
+                        }
+                        {/* Change code above this line */}
+                    </div>
+                );
+            }
+        };
+
+       
+        ReactDOM.render(<CheckUserAge  />, document.getElementById('root')); 
+    </script>
+
+    <!--<script src="script.js"></script>-->
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC - Front End Development Libraries - React and Redux</title>
+    <!--<link rel="stylesheet" type="text/css" href="stylesheet.css">-->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load React API -->
+    <script src="../assets/react/react.production.min.js"></script>
+    <!-- Load React DOM -->
+    <script src="../assets/react/react-dom.production.min.js"></script>
+    <!-- Load Babel Compiler -->
+    <script src="../assets/babel/babel.min.js"></script>
+
+
+    <!-- Load Redux -->
+    <!-- <script src="../assets/redux/redux.min.js"></script> -->
+    <!-- Load React Redux -->
+    <!-- <script src="../assets/redux/react-redux.min.js"></script> -->
+    
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class DisplayMessages extends React.Component {
+            // Change code below this line
+            constructor(props) {
+                super(props);
+
+                this.state = {
+                    input: '',
+                    messages: []
+                };
+}   
+            // Change code above this line
+            render() {
+                return <div />
+            }
+        };
+        ReactDOM.render(<DisplayMessages />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

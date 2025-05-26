@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC - Front End Development Libraries - React</title>
+    <!--<link rel="stylesheet" type="text/css" href="stylesheet.css">-->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load React API -->
+    <!--<script src="../assets/react/react.production.min.js"></script>-->
+    <!-- Load React DOM-->
+    <!--<script src="../assets/react/react-dom.production.min.js"></script>-->
+    <!-- Load Babel Compiler -->
+    <!--<script src="../assets/babel/babel.min.js"></script>-->
+
+
+    <!-- Load React API -->
+    <script src="../assets/react/react.production.min.js"></script>
+    <!-- Load React DOM-->
+    <script src="../assets/react/react-dom.production.min.js"></script>
+    <!-- Load Babel Compiler -->
+    <script src="../assets/babel/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+       
+        class MyComponent extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                users: [
+                    {
+                    username: 'Jeff',
+                    online: true
+                    },
+                    {
+                    username: 'Alan',
+                    online: false
+                    },
+                    {
+                    username: 'Mary',
+
+                    online: true
+                    },
+                    {
+                    username: 'Jim',
+                    online: false
+                    },
+                    {
+                    username: 'Sara',
+                    online: true
+                    },
+                    {
+                    username: 'Laura',
+                    online: true
+                    }
+                ]
+                };
+            }
+            render() {
+                
+                const usersOnline = this.state.users.filter(user => user.online === true);
+                const renderOnline = usersOnline.map(user => <li key={user.username}>{user.username}</li>);
+                
+                return (
+                <div>
+                    <h1>Current Online Users:</h1>
+                    <ul>{renderOnline}</ul>
+                </div>
+                );
+            }
+        }
+        ReactDOM.render(<MyComponent />, document.getElementById('root')); 
+    
+    </script>
+
+    <!--<script src="script.js"></script>-->
+</body>
+
+</html>
