@@ -1,0 +1,13 @@
+body {
+  background-color: burlywood;
+}
+.preview {
+  background-color: BlanchedAlmond;
+}
+.preview img  {
+  max-width: 100%;
+}
+textarea,
+.preview {
+  min-height: 400px;
+}

@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: SandyBrown;
+  font-family: "Loto", sans-serif;
+  margin: 20px auto;
+  min-height: 100vh;
+}
+#drum-machine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}   
+
+.display {
+  background-color: Cornsilk;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 400px;
+}
+
+.display h1 {
+  display: block;
+  width: 100%;
+  text-align: center;  
+  border: 2px solid Maroon;
+  border-radius: 4px;
+  margin: 10px;
+  background-color: SandyBrown;
+}
+#drum-pad {
+  display: flex;
+  flex-flow: wrap;
+}
+#bt {
+  border: 2px solid Maroon;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+}
+#bt:hover{
+  background-color: hsla(50, 33%, 25%, .75);
+}
+#bt:active{
+  transform: scale(1.1) rotate(0.1deg);
+  opacity: 0.8;
+}
+.key {
+  border: 2px solid Brown;
+  border-radius: 4px;
+  padding: 3px;
+  background-color: SandyBrown;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  
+}
