@@ -75,5 +75,3 @@ By completing the Front End Development Libraries certification, you’ll be abl
     Manage application state with Redux
 
     Complete full-featured front-end projects
-
-![Front End Development Libraries](https://github.com/IC-XC/Front-End-Development-Libraries-freeCodeCamp/assets/86513555/39ffd324-da0f-4774-8812-d7756e4920a1)
